@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,700;1,9..40,700&display=swap');
+
+* {
+  margin: 0;
+}
+
+:root {
+  /* Primary */
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  /* Neutral */
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+.dm-sans-400 {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-sans-700 {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--cream);
+  font-size: 18px;
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  margin: 4rem 1rem;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+.my-balance {
+  background-color: var(--soft-red);
+  border-radius: 10px;
+  color: var(--very-pale-orange);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.my-balance p {
+  font-size: 15px;
+}
+
+.my-balance p span {
+  display: block;
+  font-size: 24px;
+}
+
+.spending-last-week {
+  background-color: var(--very-pale-orange);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.spending-last-week h1 {
+  color: var(--dark-brown);
+  font-size: 22px;
+}
+
+.week-chart {
+  display: grid;
+  grid-template-rows: 150px 1fr;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  margin: 3rem 0 1.5rem 0;
+  column-gap: 12px;
+  row-gap: 10px;
+}
+
+.chart-bar {
+  align-self: flex-end;
+  justify-self: stretch;
+  background-color: var(--soft-red);
+  border-radius: 3px;
+}
+
+.week-day {
+  color: var(--medium-brown);
+  font-size: 12px;
+}
+
+hr {
+  margin-top: 1.5rem;
+  border: none;
+  border-top: 2px solid var(--cream);
+}
+
+.spending-total {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.spending-total span {
+  display: block;
+}
+
+.month-total {
+  font-size: 15px;
+  color: var(--medium-brown);
+}
+
+.month-total span {
+  font-size: 30px;
+  color: var(--dark-brown);
+}
+
+.from-last-month {
+  text-align: end;
+  font-size: 15px;
+  color: var(--dark-brown);
+  margin-top: 1rem;
+}
+
+.from-last-month span {
+  color: var(--medium-brown);
+}
+
+
+/* Footer */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
