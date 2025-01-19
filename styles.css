@@ -32,6 +32,7 @@
 
 body {
   background-color: var(--cream);
+
   font-size: 18px;
   font-family: "DM Sans", serif;
   font-optical-sizing: auto;
@@ -39,7 +40,24 @@ body {
   font-style: normal;
 }
 
+@media only screen and (min-width: 500px) {
+  main {
+    max-width: 450px;
+  }
+  .my-balance p span {
+    font-size: 1.8em !important;
+  }
+  .month-total span {
+    font-size: 2.7em !important;
+  }
+}
+
 main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
   margin: 4rem 1rem;
 }
 
@@ -57,12 +75,13 @@ section {
 }
 
 .my-balance p {
-  font-size: 15px;
+  font-size: 0.9em;
 }
 
 .my-balance p span {
   display: block;
-  font-size: 24px;
+  font-size: 1.6em;
+  margin-top: 5px;
 }
 
 .spending-last-week {
@@ -73,7 +92,7 @@ section {
 
 .spending-last-week h1 {
   color: var(--dark-brown);
-  font-size: 22px;
+  font-size: 1.3em;
 }
 
 .week-chart {
@@ -95,7 +114,7 @@ section {
 
 .week-day {
   color: var(--medium-brown);
-  font-size: 12px;
+  font-size: 0.6em;
 }
 
 hr {
@@ -108,6 +127,7 @@ hr {
   margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
+  align-items: end;
 }
 
 .spending-total span {
@@ -115,18 +135,18 @@ hr {
 }
 
 .month-total {
-  font-size: 15px;
+  font-size: 0.8em;
   color: var(--medium-brown);
 }
 
 .month-total span {
-  font-size: 30px;
+  font-size: 2em;
   color: var(--dark-brown);
 }
 
 .from-last-month {
   text-align: end;
-  font-size: 15px;
+  font-size: 0.8em;
   color: var(--dark-brown);
   margin-top: 1rem;
 }
@@ -137,5 +157,15 @@ hr {
 
 
 /* Footer */
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+footer {
+  margin-top: 3rem;
+}
+
+.attribution {
+  font-size: 0.6em;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
