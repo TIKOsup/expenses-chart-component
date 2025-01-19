@@ -43,26 +43,14 @@ function setBarValue(data) {
 }
 
 function setBarEvents() {
-  const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
   let bars = document.querySelectorAll(".chart-bar");
-
   bars.forEach((bar) => {
-    if (isTouchDevice) {
-      bar.addEventListener("touchstart", () => {
-        setVisible(bar)
-      });
-      bar.addEventListener("touchend", () => {
-        setHidden(bar)
-      });
-    }
-    else {
-      bar.addEventListener("mouseover", () => {
-        setVisible(bar)
-      });
-      bar.addEventListener("mouseout", () => {
-        setHidden(bar)
-      });
-    }
+    bar.addEventListener("mouseover", () => {
+      setVisible(bar)
+    });
+    bar.addEventListener("mouseout", () => {
+      setHidden(bar)
+    });
   });
 }
 
