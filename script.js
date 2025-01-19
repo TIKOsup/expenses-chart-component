@@ -6,6 +6,7 @@ function setChart() {
     let maxValue = getMaxValue(json);
     setColorToday();
     setBarValue(json);
+    setBarEvents();
     json.forEach(element => {
       weekday = document.getElementById(`${element.day}-bar`);
       height = (element.amount * 100) / maxValue;
@@ -46,6 +47,18 @@ function setBarValue(data) {
     let value = data.find(obj => obj.day === day).amount;
     bar.innerText = "$" + value;
   }
+}
+
+function setBarEvents() {
+  let bars = document.querySelectorAll(".chart-bar");
+  bars.forEach((bar) => {
+    bar.addEventListener("mouseover", () => {
+      setVisible(bar)
+    });
+    bar.addEventListener("mouseout", () => {
+      setHidden(bar)
+    });
+  });
 }
 
 function setVisible(element) {
