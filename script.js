@@ -1,17 +1,10 @@
 function setChart() {
-  let weekday, height;
   let data = getChartData();
   data.then(json => {
-    console.log(json);
-    let maxValue = getMaxValue(json);
     setColorToday();
     setBarValue(json);
     setBarEvents();
-    json.forEach(element => {
-      weekday = document.getElementById(`${element.day}-bar`);
-      height = (element.amount * 100) / maxValue;
-      weekday.style.height = `${height}%`;
-    });
+    setBarHeight(json);
   });
 }
 
@@ -50,14 +43,36 @@ function setBarValue(data) {
 }
 
 function setBarEvents() {
+  const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
   let bars = document.querySelectorAll(".chart-bar");
+
   bars.forEach((bar) => {
-    bar.addEventListener("mouseover", () => {
-      setVisible(bar)
-    });
-    bar.addEventListener("mouseout", () => {
-      setHidden(bar)
-    });
+    if (isTouchDevice) {
+      bar.addEventListener("touchstart", () => {
+        setVisible(bar)
+      });
+      bar.addEventListener("touchend", () => {
+        setHidden(bar)
+      });
+    }
+    else {
+      bar.addEventListener("mouseover", () => {
+        setVisible(bar)
+      });
+      bar.addEventListener("mouseout", () => {
+        setHidden(bar)
+      });
+    }
+  });
+}
+
+function setBarHeight(data) {
+  let weekday, height, maxValue;
+  maxValue = getMaxValue(data);
+  data.forEach(element => {
+    weekday = document.getElementById(`${element.day}-bar`);
+    height = (element.amount * 100) / maxValue;
+    weekday.style.height = `${height}%`;
   });
 }
 
