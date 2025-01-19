@@ -21,13 +21,27 @@
       <section class="spending-last-week">
         <h1 class="dm-sans-700">Spending - Last 7 days</h1>
         <div class="week-chart">
-          <div class="chart-bar" id="mon-bar"></div>
-          <div class="chart-bar" id="tue-bar"></div>
-          <div class="chart-bar" id="wed-bar"></div>
-          <div class="chart-bar" id="thu-bar"></div>
-          <div class="chart-bar" id="fri-bar"></div>
-          <div class="chart-bar" id="sat-bar"></div>
-          <div class="chart-bar" id="sun-bar"></div>
+          <div class="chart-bar" onmouseenter="setVisible(this)" onmouseleave="setHidden(this)" id="mon-bar">
+            <p class="spend"></p>
+          </div>
+          <div class="chart-bar" onmouseenter="setVisible(this)" onmouseleave="setHidden(this)" id="tue-bar">
+            <p class="spend"></p>
+          </div>
+          <div class="chart-bar" onmouseenter="setVisible(this)" onmouseleave="setHidden(this)" id="wed-bar">
+            <p class="spend"></p>
+          </div>
+          <div class="chart-bar" onmouseenter="setVisible(this)" onmouseleave="setHidden(this)" id="thu-bar">
+            <p class="spend"></p>
+          </div>
+          <div class="chart-bar" onmouseenter="setVisible(this)" onmouseleave="setHidden(this)" id="fri-bar">
+            <p class="spend"></p>
+          </div>
+          <div class="chart-bar" onmouseenter="setVisible(this)" onmouseleave="setHidden(this)" id="sat-bar">
+            <p class="spend"></p>
+          </div>
+          <div class="chart-bar" onmouseenter="setVisible(this)" onmouseleave="setHidden(this)" id="sun-bar">
+            <p class="spend"></p>
+          </div>
           <div class="week-day">mon</div>
           <div class="week-day">tue</div>
           <div class="week-day">wed</div>

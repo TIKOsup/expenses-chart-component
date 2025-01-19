@@ -40,10 +40,7 @@ body {
   font-style: normal;
 }
 
-@media only screen and (min-width: 500px) {
-  main {
-    max-width: 450px;
-  }
+@media only screen and (min-width: 1440px) {
   .my-balance p span {
     font-size: 1.8em !important;
   }
@@ -55,6 +52,7 @@ body {
 main {
   margin-left: auto;
   margin-right: auto;
+  max-width: 450px;
 }
 
 .container {
@@ -110,6 +108,40 @@ section {
   justify-self: stretch;
   background-color: var(--soft-red);
   border-radius: 3px;
+  position: relative;
+}
+
+.spend {
+  visibility: hidden;
+  position: absolute;
+  height: 1.5em;
+  width: 3.5em;
+  left: -0.5em;
+  top: -36px;
+  background-color: var(--dark-brown);
+  border-radius: 3px;
+  text-align: center;
+  color: var(--very-pale-orange);
+  padding: 5px;
+  margin-bottom: 1rem;
+  font-size: 0.8em;
+  align-content: center;
+}
+
+.current {
+  visibility: visible !important;
+}
+
+.chart-bar:hover {
+  background-color: hsla(10, 79%, 65%, 0.6);
+}
+
+.today {
+  background-color: var(--cyan);
+}
+
+.today:hover {
+  background-color: hsla(186, 34%, 60%, 0.6);
 }
 
 .week-day {
