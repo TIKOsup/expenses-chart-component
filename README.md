@@ -45,5 +45,5 @@ Users should be able to:
 
 ## Author
 
-- GitHub - [TIKOsup](https://github.com/TIKOsup)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/TIKOsup)
+- GitHub - [@TIKOsup](https://github.com/TIKOsup)
+- Frontend Mentor - [@TIKOsup](https://www.frontendmentor.io/profile/TIKOsup)
